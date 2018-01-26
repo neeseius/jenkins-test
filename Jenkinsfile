@@ -1,6 +1,7 @@
 pipeline {
     agent { label 'docker' }
-
+    
+    stages {
         stage('Run Gradle') {
             agent { 
                 dockerfile {
@@ -12,4 +13,5 @@ pipeline {
                 sh 'touch /var/log/broker/file'
             }
         }
+    }
 }
