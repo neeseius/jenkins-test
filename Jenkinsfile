@@ -6,7 +6,7 @@ pipeline {
             agent { 
                 dockerfile {
                     reuseNode true
-                    dockerfile 'Dockerfile'
+                    filename 'Dockerfile'
                 }
             }
             steps {
