@@ -2,5 +2,5 @@ FROM gradle:latest
 
 MAINTAINER Justin N
 
-USER ROOT
+USER root
 RUN mkdir /var/log/broker -m 777
