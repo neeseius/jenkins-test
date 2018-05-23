@@ -5,6 +5,5 @@ MAINTAINER Justin N
 RUN apk update
 RUN apk add apache2 python
 RUN mkdir -p /var/www
-COPY auth/ /var/www/auth
 COPY config.json /var/www/auth/resources/config/config.json
 COPY env.ini /var/www/auth/resources/config/config.json
