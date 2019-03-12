@@ -1,4 +1,4 @@
-def version = "0.5"
+version = "0.5"
 
 def createDeployJob(appName, appEnv) {
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
