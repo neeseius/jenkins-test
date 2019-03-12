@@ -35,8 +35,8 @@ def buildJobs() {
     createBuildJob(APP_NAME, it)
 
     environments = ["dev", "stg", "prd"]
-    environments.each { it ->
-        createBuildJob(APP_NAME, it)
+    environments.each { item ->
+        createBuildJob(APP_NAME, item)
     }
 }
 
