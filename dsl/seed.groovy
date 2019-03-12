@@ -1,6 +1,6 @@
 def version = "0.5"
 
-def createDeployJob(appName, appEnv) {
+def createDeployJob(appName) {
     pipelineJob("deploy-${appname}-${appEnv}-${version}") {
         definition {
             cpsScm {
@@ -32,11 +32,11 @@ def createBuildJob(appName, appEnv) {
 }
 
 def buildJobs() {
-    createBuildJob(APP_NAME, it)
+    createBuildJob(APP_NAME)
 
     environments = ["dev", "stg", "prd"]
-    environments.each { item ->
-        createBuildJob(APP_NAME, item)
+    environments.each { it ->
+        createBuildJob(APP_NAME, it)
     }
 }
 
