@@ -1,21 +1,11 @@
 package org.foo
 
-class Utils1 {
-    def func1() {
-        println("this is func 1")
+class Utils {
+    def func1(data) {
+        return("func1: ${data}")
     }
 
-    def func2() {
-        println("this is func 2")
-    }
-}
-
-class Utils2 {
-    def func1() {
-        println("this is func 3")
-    }
-
-    def func2() {
-        println("this is func 4")
+    def func2(data) {
+        return("func2: ${data}")
     }
 }
