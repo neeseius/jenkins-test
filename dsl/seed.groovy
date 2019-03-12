@@ -22,7 +22,7 @@ def createDeployJob(appName, appEnv) {
 }
 
 def createBuildJob(appName) {
-    multibranchPipelineJob("build-${appName}-${appEnv}") {
+    multibranchPipelineJob("build-${appName}") {
         branchSources {
             git {
                 remote("git@bitbucket.org:test/${appName}")
