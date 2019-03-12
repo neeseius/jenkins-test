@@ -1,6 +1,6 @@
 def version = "0.5"
 
-def createDeployJob(appName) {
+def createDeployJob(appName, appEnv) {
     pipelineJob("deploy-${appname}-${appEnv}-${version}") {
         definition {
             cpsScm {
@@ -21,8 +21,8 @@ def createDeployJob(appName) {
     }
 }
 
-def createBuildJob(appName, appEnv) {
-    multibranchPipelineJob("build-${appName}-${appEnv}-${version}") {
+def createBuildJob(appName) {
+    multibranchPipelineJob("build-${appName}-${appEnv}") {
         branchSources {
             git {
                 remote("git@bitbucket.org:test/${appName}")
@@ -36,7 +36,7 @@ def buildJobs() {
 
     environments = ["dev", "stg", "prd"]
     environments.each { it ->
-        createBuildJob(APP_NAME, it)
+        createDeployJob(APP_NAME, it)
     }
 }
 
