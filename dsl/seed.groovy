@@ -1,3 +1,4 @@
+import org.foo
 version = "0.5"
 
 def createDeployJob(appName, appEnv) {
@@ -21,21 +22,8 @@ def createDeployJob(appName, appEnv) {
     }
 }
 
-def createBuildJob(appName) {
-    multibranchPipelineJob("build-${appName}") {
-        branchSources {
-            git {
-                remote("git@bitbucket.org:test/${appName}")
-            }
-        }
-    }
-}
-
 def buildJobs() {
-    createBuildJob(APP_NAME)
-
-    environments = ["dev", "stg", "prd"]
-    environments.each { it ->
+    ["dev", "stg", "prd"].each { it ->
         createDeployJob(APP_NAME, it)
     }
 }
