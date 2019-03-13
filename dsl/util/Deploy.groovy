@@ -1,4 +1,4 @@
-package foo.bar
+package util
 
 class Deploy {
     def script = """

@@ -1,4 +1,4 @@
-package org.foo
+package util
 
 class Utils {
     def func1(data) {
