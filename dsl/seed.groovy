@@ -6,7 +6,7 @@ def createDeployJob(appName, appEnv) {
     util.appName = appName
     util.version = version
 
-    def jobScript = util.script
+    def jobScript = util.getScript()
 
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
         definition {
