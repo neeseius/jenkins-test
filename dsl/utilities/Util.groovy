@@ -1,6 +1,6 @@
 package utilities
 
-class MyUtilities {
+class Util {
     def script = """
         @Library(["SharedLib"])
 
