@@ -2,6 +2,9 @@ import utilities.Util
 version = "0.5"
 
 def createDeployJob(appName, appEnv) {
+    util = new Util()
+    def jobScript = util.script
+
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
         definition {
             cpsScm {
@@ -16,7 +19,7 @@ def createDeployJob(appName, appEnv) {
                         }
                     }
                 }
-                scriptPath("Jenkinsfile")
+                script(jobScript)
             }
         }
     }
