@@ -5,7 +5,7 @@ class Util {
         @Library(["SharedLib"])
 
         def appSpec = [
-            appName: "stuff",
+            appName: "${APP_NAME}-${version}",
             domain: "test.com",
             envName: "dev",
             appEnv: "dev",
