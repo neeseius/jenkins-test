@@ -1,4 +1,4 @@
-package util
+package utilities
 
 class Utils {
     def func1(data) {

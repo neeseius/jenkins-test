@@ -1,11 +1,11 @@
-package util
+package utilities
 
 class Deploy {
     def script = """
         @Library(["SharedLib"])
 
         def appSpec = [
-            appName: "${APP_NAME}",
+            appName: "stuff",
             domain: "test.com",
             envName: "dev",
             appEnv: "dev",
