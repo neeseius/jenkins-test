@@ -1,5 +1,6 @@
 import scripts.kubeDeployScript
-version = "0.5"
+import utilities.Meta
+version = Meta.version
 
 def createDeployJob(appName, appEnv) {
     script = new kubeDeployScript()
