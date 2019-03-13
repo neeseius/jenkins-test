@@ -1,4 +1,4 @@
-import org.foo
+import org.foo.Utils
 version = "0.5"
 
 def createDeployJob(appName, appEnv) {
