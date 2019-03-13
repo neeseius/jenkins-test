@@ -7,19 +7,9 @@ def createDeployJob(appName, appEnv) {
 
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
         definition {
-            cpsScm {
-                scm {
-                    git {
-                        remote {
-                            url("git@bitbucket.org/test/${appName}")
-                        }
-                        branches('master')
-                        extensions {
-                            cleanBeforeCheckout()
-                        }
-                    }
-                }
+            cps {
                 script(jobScript)
+                sandbox()
             }
         }
     }
