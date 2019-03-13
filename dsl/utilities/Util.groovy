@@ -1,11 +1,14 @@
 package utilities
 
 class Util {
+    String appName
+    String version
+
     def script = """
         @Library(["SharedLib"])
 
         def appSpec = [
-            appName: "${APP_NAME}-${version}",
+            appName: "${appName}-${version}",
             domain: "test.com",
             envName: "dev",
             appEnv: "dev",

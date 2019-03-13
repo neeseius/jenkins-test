@@ -3,6 +3,9 @@ version = "0.5"
 
 def createDeployJob(appName, appEnv) {
     util = new Util()
+    util.appName = appName
+    util.version = version
+
     def jobScript = util.script
 
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
