@@ -1,6 +1,6 @@
-package utilities
+package scripts
 
-class Util {
+class kubeDeployScript {
     String appName
     String version
 

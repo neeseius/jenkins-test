@@ -1,12 +1,12 @@
-import utilities.Util
+import scripts.kubeDeployScript
 version = "0.5"
 
 def createDeployJob(appName, appEnv) {
-    util = new Util()
-    util.appName = appName
-    util.version = version
+    script = new kubeDeployScript()
+    script.appName = appName
+    script.version = version
 
-    def jobScript = util.getScript()
+    def jobScript = script.getScript()
 
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
         definition {
