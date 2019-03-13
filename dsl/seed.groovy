@@ -2,13 +2,13 @@ import scripts.kubeDeployScript
 import utilities.Meta
 
 def createDeployJob(appName, appEnv) {
+    meta = new Meta()
+    version = meta.version
+
     script = new kubeDeployScript()
     script.appName = appName
     script.version = version
     
-    meta = new Meta()
-    version = meta.version
-
     def jobScript = script.getScript()
 
     pipelineJob("deploy-${appName}-${appEnv}-${version}") {
