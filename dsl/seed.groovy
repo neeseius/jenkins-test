@@ -1,11 +1,13 @@
 import scripts.kubeDeployScript
 import utilities.Meta
-version = Meta.version
 
 def createDeployJob(appName, appEnv) {
     script = new kubeDeployScript()
     script.appName = appName
     script.version = version
+    
+    meta = new Meta()
+    version = meta.version
 
     def jobScript = script.getScript()
 
