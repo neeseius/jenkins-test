@@ -30,5 +30,5 @@ class Util {
             gitUrl: "git@bitbucket.org:test/\${appSpec.appName}.git",
             imageFromBuild: "test/kube-build/\${appSpec.appName}/containers"
         )
-    """.stripIdent()
+    """.stripIndent()
 }
