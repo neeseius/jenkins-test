@@ -1,7 +1,7 @@
 package utilities
 
 class Deploy {
-    def script = """
+    def sscript = """
         @Library(["SharedLib"])
 
         def appSpec = [
