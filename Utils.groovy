@@ -1,11 +1,11 @@
 package utilities
 
 class Utils {
-    def func1(data) {
+    def func2(data) {
         return("func1: ${data}")
     }
 
-    def func2(data) {
+    def func3(data) {
         return("func2: ${data}")
     }
 
