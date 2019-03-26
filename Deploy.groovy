@@ -32,3 +32,4 @@ class Deploy {
         )
     """.stripIdent()
 }
+
